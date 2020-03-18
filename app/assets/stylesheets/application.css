@@ -31,6 +31,13 @@
     margin: 0 0 30px 33px;
 
 }
+/* top.html.erb */
+.p-top {
+    margin: 33px;
+    font-family: verdana, ariel, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
 /* index.html.erb */
 
 main{
@@ -85,7 +92,7 @@ h2 {
     margin-right: 5px;
 
 }
-.span-show{
+span{
     font-weight: bold;
 }
 
