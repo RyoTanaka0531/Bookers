@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<main>
         <h1>Editing Book</h1>
+        <div class="form-edit">
         <%= form_for(@book) do |f| %>
+          <% @book.errors.full_messages.each do |msg| %>
+            <%= msg %>
+          <% end %>
+        <div class="form-edit-box">
         <p>Title</p>
         <%= f.text_field :title %>
+        </div>
+        <div class="form-edit-box">
         <p>Body</p>
         <%= f.text_area :body %>
+        </div>
+        <div class="edit-submit">
         <p><%= f.submit "Update Book" %></p>
+        </div>
         <% end %>
-        <p><%= link_to 'Show',book_path(@book.id) %></p>
-        <p><%= link_to 'Back',books_path %></p>
-    </body>
-</html>
+        </div>
+         <div class="links" clearfix>
+          <p class="p-show2"><%= link_to 'Edit',edit_book_path(@book.id) %></p>
+          <p class="p-show2">|</p>
+          <p class="p-show2"><%= link_to 'Back',books_path %></p>
+        </div>
+</main>

@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>
-        Title:<%= @book.title %>
-        </p>
-        <p>
-        Body:<%= @book.body %>
-        </p>
-        <p><%= link_to 'Edit',edit_book_path(@book.id) %></p>
-        <p><%= link_to 'Back',books_path %></p>
-    </body>
-</html>
+<main>
+  <div class="notice">
+    <p id="notice">
+      <%=  notice %> 
+    </p>
+  </div>
+        <div class="show-texts">
+          <p class="p-show1">
+              <span class="span-show">Title:</span><%= @book.title %>
+          </p>
+          <p class="p-show1">
+              <span class="span-show">Body:</span><%= @book.body %>
+          </p>
+        </div>
+        <div class="show-links" clearfix>
+          <p class="p-show2"><%= link_to 'Edit',edit_book_path(@book.id) %></p>
+          <p class="p-show2">|</p>
+          <p class="p-show2"><%= link_to 'Back',books_path %></p>
+        </div>
+</main>

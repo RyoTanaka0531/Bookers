@@ -13,3 +13,86 @@
  *= require_tree .
  *= require_self
  */
+
+ /* common */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.notice {
+    color: green;
+    margin: 0 0 30px 33px;
+
+}
+/* index.html.erb */
+
+main{
+    margin: 33px;
+    font-family: verdana, ariel, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+tr {
+    padding: 10px 10px 5px 0;
+}
+td {
+    padding: 0 5px 7px 5px;
+}
+a {
+    color: black;
+}
+
+h2 {
+    padding: 20px 0;
+}
+.text{
+    margin-bottom: 10px;
+}
+
+/*show.html.erb*/
+
+
+.show-texts {
+    margin:0 0 30px 33px;
+
+}
+.p-show1{
+    margin: 0 0 25px 0;
+}
+.p-show2{
+    float: left;
+    margin-right: 5px;
+
+}
+.span-show{
+    font-weight: bold;
+}
+
+/* edit.html.erb */
+.form-edit-box{
+    margin-bottom: 20px;
+}
+.edit-submit{
+    margin-bottom: 15px;
+}
