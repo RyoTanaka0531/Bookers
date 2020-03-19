@@ -1,32 +1,33 @@
 <main>
         <h1>Editing Book</h1>
-        <div class="form-edit">
-        <%= form_for(@book) do |f| %>
-          <% if @book.errors.any? %>
-            <div class="alert alert-danger ">
-              <ul>
-                <% @book.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
+<div class="form-edit">
+  <%= form_for(@book) do |f| %>
+        <% if @book.errors.any? %>
+          <div class="alert alert-danger">
+            <ul>
+              <% @book.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
         <div class="form-edit-box">
-        <p>Title</p>
-        <%= f.text_field :title %>
+          <p>Title</p>
+          <%= f.text_field :title %>
         </div>
         <div class="form-edit-box">
-        <p>Body</p>
-        <%= f.text_area :body %>
+          <p>Body</p>
+          <%= f.text_area :body %>
         </div>
         <div class="edit-submit">
-        <p><%= f.submit "Update Book" %></p>
+          <p><%= f.submit "Update Book" %></p>
         </div>
-        <% end %>
-        </div>
-         <div class="links" clearfix>
-          <p class="p-show2"><%= link_to 'Edit',edit_book_path(@book.id) %></p>
-          <p class="p-show2">|</p>
-          <p class="p-show2"><%= link_to 'Back',books_path %></p>
-        </div>
+  <% end %>
+</div>
+
+<div class="links" clearfix>
+  <p class="p-show2"><%= link_to 'Edit',edit_book_path(@book.id) %></p>
+  <p class="p-show2">|</p>
+  <p class="p-show2"><%= link_to 'Back',books_path %></p>
+</div>
 </main>
